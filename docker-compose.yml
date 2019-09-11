@@ -1,0 +1,17 @@
+version: '3'
+services:
+      
+
+  service_web:
+    container_name: Helloworld
+    restart: always
+    build: ./helloworld/
+    ports:
+     - "8000:8000"
+    volumes:
+      - ./helloworld:/usr/src/app
+    
+    command: >
+      bash -c "
+        python manage.py runserver 0.0.0.0:8000"
+

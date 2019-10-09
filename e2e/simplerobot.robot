@@ -20,5 +20,5 @@ test mainpage
 
 ตรวจสอบการเข้าถึงหน้าเพจ
     [Arguments]     ${urlpage}  ${content}
-    Open Browser    ${urlpage}    gc     #remote_url=http://localhost:4444/wd/hub
+    Open Browser    ${urlpage}    ff     #remote_url=http://localhost:4444/wd/hub
     Wait Until Page Contains    ${content}
